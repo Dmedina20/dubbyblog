@@ -2,6 +2,8 @@
 
 This is a clone of the Dub.co website's blog page by Daniel Medina
 
+Live [Demo](https://dubco.netlify.app)
+
 ## Technologies I Used:
 
 - [Next.js 13](https://nextjs.org/docs/getting-started)
