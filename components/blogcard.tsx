@@ -3,13 +3,14 @@ import Image from "next/image";
 import React from "react";
 
 interface BlogCardProps {
+  id: number;
+  tag: string;
   title: string;
   description: string;
   date: string;
   imageUrl: string;
   authorName: string;
   authorImg: string;
-  href: string;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({
@@ -18,14 +19,12 @@ const BlogCard: React.FC<BlogCardProps> = ({
   date,
   imageUrl,
   authorImg,
-  href,
   authorName,
+  id,
+  tag,
 }) => {
   return (
-    <a
-      className="flex flex-col rounded-lg border border-gray-200 transition-all hover:shadow-lg"
-      href={href}
-    >
+    <div className="flex flex-col rounded-lg border border-gray-200 transition-all hover:shadow-lg">
       <Image
         alt={title}
         width="1200"
@@ -62,7 +61,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           </time>
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 
